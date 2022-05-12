@@ -1,0 +1,18 @@
+URLS.py
+1-urlpatterns = [
+///this is the url for the index page or landing page
+    path('',views.index,name='index'),
+/// this url is for signup with google
+    path('accounts/', include('allauth.urls'),name="login_google"),
+
+//this is for user login 
+    path('login/', views.user_login, name="login"),
+// this is for user signup
+    path('signup/', views.signup, name="signup"),
+]
+
+
+2:= FORMS.py
+// here i have created a signup form ehich is used for registration of users
+// and also login from which take username and password for authentication
+
