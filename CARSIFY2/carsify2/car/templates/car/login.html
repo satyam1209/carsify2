@@ -11,13 +11,17 @@
         {% endfor %}
 
         {% endif %}
+<!--     check if the request id post or not -->
     <form action="" method="POST" novalidate>
         {% csrf_token %}
+<!--       rendering form here that was passed in view   -->
         {% for fm in form %}
         <div class="form-group">
             <h3>{{fm.label_tag}}</h3>{{fm}}
+<!--             if any error in the filling of form -->
             <span class="errorlist text-warning">{{fm.errors|striptags}}</span><br><br>
         </div>
         {% endfor %}
+<!--      submit button to sent post request    -->
         <button type="submit" class="btn btn-lg btn-outline-success">Login</button>
             {% endblock content %}
