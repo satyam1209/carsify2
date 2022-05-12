@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'car',
-    # The following apps are required:
+    # The following apps are required for signup with google:
     'django.contrib.sites',
 
     'allauth',
