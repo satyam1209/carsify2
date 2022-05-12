@@ -7,6 +7,7 @@
     <h3 class="text-white my-5"><h2 class="mb-5"></h2></h3>
     <form action="" method="POST" novalidate>
         {% csrf_token %}
+        <!-- if there is any message show it here -->
         {% if messages %}
         {% for message in messages %}
         <p {% if message.tags %} class="alert alert-{{message.tags}} mb-5" 
@@ -15,6 +16,7 @@
        </p>
         {% endfor %}
         {% endif %}
+        <!-- signup form is rendered here -->
         {% for fm in form %}
         <div class="form-group">
             <h3>{{fm.label_tag}}</h3>{{fm}}
@@ -25,7 +27,7 @@
         {% if form.non_field_errors %}
         {% for error in form.non_field_errors %}
         <p class="alert alert-danger my-3">{{error}}</p>
-        {% endfor %}
+      {% endfor %}
 
         {% endif %}
 
